@@ -56,23 +56,6 @@ These are moderate, descriptive associations, not evidence of fraudulent intent.
 ## Next steps
 
 A supervised model to predict `Provider_flag` from provider-level features, prioritizing ratio-type features (reimbursement per beneficiary, claims per beneficiary, diagnostic diversity, physician concentration) and treating size variables explicitly. The class imbalance calls for stratified splits at the provider level, class weights or tree-based models, and evaluation with recall and precision–recall metrics, since missed fraud is the costly error.
-
-## Repository structure
-
-```
-├── fraud_detection.ipynb   # Analysis notebook
-├── fraud_detection.html    # Static export of the notebook
-├── utils.py                # Helper functions used by the notebook
-├── requirements.txt        # Python dependencies
-└── README.md
-```
-
-## How to run
-
-```bash
-python -m venv .venv
-source .venv/bin/activate        # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
 jupyter notebook fraud_detection.ipynb
 ```
 
